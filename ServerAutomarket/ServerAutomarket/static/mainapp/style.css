@@ -1,0 +1,758 @@
+
+@font-face {
+    font-family: 'FiraSans';
+    src: url('/static/mainapp/fonts/FiraSans-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div {
+    display: block;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dbeef2+0,8fc9d4+100 */
+    background: rgb(219,238,242); /* Old browsers */
+    /*background: -moz-linear-gradient(top,  rgba(219,238,242,1) 0%, rgba(143,201,212,1) 100%); !* FF3.6-15 *!*/
+    /*background: -webkit-linear-gradient(top,  rgba(219,238,242,1) 0%,rgba(143,201,212,1) 100%); !* Chrome10-25,Safari5.1-6 *!*/
+    /*background: linear-gradient(to bottom,  rgba(219,238,242,1) 0%,rgba(143,201,212,1) 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!*/
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbeef2', endColorstr='#8fc9d4',GradientType=0 ); /* IE6-9 */
+}
+h1 {
+    text-align: center;
+}
+
+main {
+    min-height: 830px;
+    width: 100%;
+    float: left;
+}
+
+#nice_text_menu {
+    font-family: "FiraSans", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    margin-bottom: -60px;
+}
+
+header {
+    width: 100%;
+    float: left;
+    height: 700px;
+    font-size: 30px;
+    background: url(/static/mainapp/images/banner.png) no-repeat top;
+    font-family: "FiraSans", Helvetica, Arial, sans-serif;
+    /*background-size: cover;*/
+    background-size: initial;
+}
+/*.header {*/
+    /*text-align: center ;*/
+    /*font-family: "FiraSans", Helvetica, Arial, sans-serif;*/
+    /*font-size: 30px;*/
+    /*margin-bottom: -8px;*/
+    /*color: #6d6bdc;*/
+    /*height: 350px;*/
+    /*background: url(images/banner.png) no-repeat top;*/
+/*}*/
+
+.header_inside {
+    position: relative;
+    width: 1140px;
+    height: 100%;
+    margin: 0 auto;
+    background: url("/static/mainapp/images/wheel_list_marke1r.png") no-repeat 50px 20px;
+    text-align: center;
+    text-decoration: #337D8E;
+    font-size: 30px;
+}
+
+.Hello {
+    /*width: 270px;*/
+    /*height: 150px;*/
+    font-family: "FiraSans", Helvetica, Arial, sans-serif;
+    /*background: red;*/
+    /*position: absolute;*/
+    /*top: 335px;*/
+    font-size: 30px;
+    text-transform: uppercase;
+    position: relative;
+    top: 76px;
+    line-height: 1.1;
+    left: 10px;
+}
+
+.Hello_add{
+    font-size: 18px;
+    font-style: italic;
+    position: relative;
+    left: 10px;
+    top: 94px;
+    line-height: 0.8;
+}
+
+.menu {
+     width: 270px;
+     height: 66px;
+     background: #3c3c3c;
+     font-family: "FiraSans", Helvetica, Arial, sans-serif;
+     text-decoration-color: #787e70;
+     position: initial;
+}
+
+.menu_list {
+    width: 270px;
+    height: 270px;
+    background: #dc818f;
+    font-family: "FiraSans", Helvetica, Arial, sans-serif;
+    text-decoration-color: #787e70;
+}
+
+.text1 {
+    padding-top: 10%;
+}
+.text2 {
+    padding-top: 10%;
+    font-family: "FiraSans", sans-serif;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.main_container {
+    width: 1170px;
+
+    background: blue;
+    margin: -25px auto;
+}
+
+.menu_list {
+    width: 100%;
+    background: #9ed0db;
+    padding: 0;
+    margin: 0;
+
+}
+
+.menu_list li {
+    list-style-type: none;
+}
+
+.menu_list li a {
+    display: block;
+    padding: 15px 42px;
+    font-family: "Roboto Black", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+}
+
+.menu_list li a:hover {
+    background: #333333;
+    color: white;
+}
+
+.menu_list li:first-child a {
+    color: white;
+    padding: 25px 42px;
+    background: #333333;
+
+}
+
+.b_under_menu_wrap {
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    margin-top: 30px;
+}
+
+.b_under_menu {
+    /*background: url("../images/store.jpg") no-repeat;*/
+    font-family: "Raleway Black", sans-serif;
+    font-style: italic;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #9ed0db;
+    text-shadow: 1px 1px 2px #5e5e5e;
+    padding: 244px 7px 22px 35px;
+}
+.right_main {
+    width: 871px;
+    float: right;
+    margin-top: -684px;
+}
+
+.header_products {
+    color: #707070;
+    font-family: "Roboto Black", sans-serif;
+    font-style: italic;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 30px;
+    background: #f8f8f8;
+    margin-bottom: 30px;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.products_wrap {
+    float: left;
+}
+
+.product_unit {
+    background: #fff;
+    width: 270px;
+    height: 320px;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+
+.product_unit:nth-child(3n) {
+    margin-right: 0;
+}
+
+.product_unit img {
+    width: 250px;
+    height: 180px;
+    margin-bottom: 16px;
+}
+
+.product_name {
+    width: 180px;
+    float: left;
+    font-size: 14px;
+    font-family: "FiraSans", sans-serif;
+    max-height: 2.4em;
+    overflow: hidden;
+}
+
+.product_price {
+    width: 85px;
+    float: right;
+    text-align: right;
+    font-size: 18px;
+    font-family: "Roboto Black Italic", sans-serif;
+    line-height: 0.95;
+}
+
+.product_old_price {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #e24602;
+}
+
+.staff {
+    float: inherit;
+    width: 870px;
+    height: 724px;
+
+}
+
+.Welcome {
+    width: 270px;
+    height: 300px;
+    background: #9ed0db;
+    color: #333;
+    position: absolute;
+    top: 335px;
+}
+
+.header_social {
+    position: absolute;
+    right: 55px;
+    top: 50px;
+}
+
+.header_social a {
+    color: #fff8e0;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 10px;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.header_social a:hover {
+    color: #337D8E;
+}
+
+.catalog-product {
+    width: 270px;
+    float: left;
+    margin-top: -20px;
+    margin-left: 14px;
+}
+
+#logo_img {
+    height: 75px;
+    width: 75px;
+    padding-right: 20px;
+    margin-bottom: -20px;
+}
+
+#map {
+    width: 100%;
+    height: 374px;
+}
+
+#menu_shop li a {
+    font-family: "FiraSans", serif;
+    text-decoration: none;
+    font-size: 22pt;
+
+
+}
+#menu_shop a:visited {
+    color: #6d6bdc;
+}
+
+#menu_shop a:link {
+    color: #707070;
+}
+
+#menu_shop a:hover {
+    color: #39eed6;
+}
+
+#menu_shop li {
+
+    list-style-type: none;
+    display: inline;
+    padding: 2px;
+
+}
+
+#menu_shop {
+    text-align: center;
+    padding: 50px;
+    margin-top: -90px;
+
+}
+
+#nice_text {
+     font-family: "FiraSans", Arial, sans-serif;
+     font-size: 16px;
+ }
+
+/*#nice_text_catalog {*/
+    /*font-family: "FiraSans", Arial, sans-serif;*/
+    /*font-size: 16px;*/
+/*}*/
+.nice_text_catalog {
+    font-family: "FiraSans", Arial, sans-serif;
+    font-size: 16px;
+}
+
+/*.widthcatalog {*/
+
+/*}*/
+#width1 {
+    height: 255px;
+    width: 400px;
+}
+
+#width2 {
+    height: 255px;
+    width: 400px;
+}
+
+#item_p p::first-letter {
+    color: red;
+    font-family: "sans-serif";
+    font-size: 150%;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+
+.headers {
+    font: 18px black;
+    font-weight: 400;
+    background: #999999;
+
+}
+
+
+.tinycar {
+    color: #707070;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.caracteristics {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.caracteristics_list {
+    list-style-image: url("/static/mainapp/images/wheel_list_marker.jpg");  /*была в начале ./images */
+    margin-left: 20px;
+    color: black;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.fields {
+    width: 350px;
+    font: 18px black;
+    font-weight: 400;
+    background:  white;
+}
+
+.text_input {
+    width: 350px;
+    height: 200px;
+    font-style: oblique;
+}
+
+.borders {
+    border: 1px solid #000;
+}
+
+.menu_image{
+    height: 20px;
+}
+.center_img {
+    text-align: center;
+}
+
+.center_img  img {
+    border: 1px solid black;
+    height: 300px;
+}
+
+.center_img  img:hover {
+    border: 1px solid transparent;
+}
+
+#email_input:focus {
+    background: lightgreen;
+    color: tomato;
+}
+.catalog-productsWrap {
+    width: 100%;
+    float: left;
+}
+
+.catalog-productUnit {
+    width: 36%;
+    float: left;
+    margin-left: 9%;
+    margin-bottom: 35px;
+    outline: 1px solid #ccc;
+
+}
+
+.catalog-productUnit:nth-child(4n) {
+    margin-right: 0;
+}
+
+
+.footer {
+    text-align: right;
+    height: 100px;
+    background: #FFFFCC;
+    padding: 15px;
+}
+
+
+.car-img {
+    width:600px;
+    height: 355px;
+    border: 2px solid #274E7D;
+}
+.car-img2 {
+    width: 800px;
+    height: 355px;
+    border: 2px solid #274E7D;
+}
+
+.car-img3 {
+    width: 800px;
+    height: 390px;
+    border: 2px solid #274E7D;
+}
+.car-img4 {
+    width: 900px;
+    height: 500px;
+    border: 2px solid #274E7D;
+}
+
+.car-img:hover {
+     border-color: transparent;
+ }
+.car-img2:hover {
+    border-color: transparent;
+}
+
+.car-imgAndDescription {
+    width: 100%;
+    margin-bottom: 15px;
+    float: left;
+}
+
+.car-shortDescHeader {
+    margin-top: 0;
+}
+
+.car-featuresHeader {
+    clear: both;
+}
+
+.car-imgWrap {
+    width: 16%;
+    margin-right: 2%;
+    float: left;
+}
+
+.car-shortDescWrap {
+    width: 41%;
+    float: right;
+}
+
+.car-shortDescription {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+.car-buyBtn {
+    display: block;
+    float: right;
+    padding: 15px 25px;
+    border-radius: 4px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #7d4164;
+    font-weight: bold;
+
+    /* Градиент можно сгенерировать здесь http://www.colorzilla.com/gradient-editor/ */
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f6f8+0,d8e1e7+50,b5c6d0+51,e0eff9+100;Grey+Gloss+%232 */
+    background: rgb(242,246,248); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(242,246,248,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=0 ); /* IE6-9 */
+}
+
+.car-buyBtn:hover {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dee1e2+0,d8e1e7+50,b5c6d0+51,cedce5+100 */
+    background: rgb(222,225,226); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(222,225,226,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(206,220,229,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(222,225,226,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(206,220,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(222,225,226,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(206,220,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dee1e2', endColorstr='#cedce5',GradientType=0 ); /* IE6-9 */
+}
+
+.car-buyBtn:active {
+    color: #528426;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d2ff52+0,91e842+100;Neon */
+    background: rgb(210,255,82); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(210,255,82,1) 0%, rgba(145,232,66,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(210,255,82,1) 0%,rgba(145,232,66,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(210,255,82,1) 0%,rgba(145,232,66,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842',GradientType=0 ); /* IE6-9 */
+}
+
+.car-fullDescription {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "FiraSans", Arial, sans-serif;
+
+}
+
+.car-shortDescription:first-letter,
+.car-fullDescription:first-letter {
+    color: #274E7D;
+    font-family: "FiraSans", Arial, sans-serif;
+    font-size: 30px;
+}
+
+.car-features {
+    color: #274E7D;
+    font-size: 20px;
+    font-style: italic;
+    border-collapse: collapse;
+}
+
+.car-features td {
+    border: 1px solid black;
+    font-family: "FiraSans", Arial, sans-serif;
+    font-size: 20px;
+}
+
+.car-features strong {
+    font-style: normal;
+}
+.car-featuresHeader {
+    clear: both;
+}
+.car-header {
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    background: #eaeaea;
+    width: 100%;
+    font-family: "FiraSans", Arial, sans-serif;
+}
+
+footer {
+    width: 100%;
+    float: left;
+    height: 350px;
+    background: #373737;
+    color: #fff;
+    font-family: "Roboto Regular", sans-serif;
+    font-size: 12px;
+}
+
+.footer_container {
+    width: 1170px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 43px;
+    box-sizing: border-box;
+}
+
+.footer_unit_head {
+    font-size: 18px;
+    font-family: "Raleway Black", sans-serif;
+    margin-bottom: 30px;
+}
+
+.footer_unit_newsletter_unit {
+    width: 250px;
+}
+
+.footer_unit_newsletter_text {
+    margin-bottom: 20px;
+}
+
+.footer_unit_newsletter_unit input,
+.footer_unit_newsletter_unit button {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+
+.footer_unit_newsletter_unit input {
+    border: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: #fff51f;
+    font-family: "Roboto Bold", sans-serif;
+}
+
+.footer_unit_newsletter_unit input:focus,
+.footer_unit_newsletter_unit button:active,
+.footer_unit_newsletter_unit button:focus {
+    outline: none;
+}
+
+.footer_unit_newsletter_unit button {
+    text-transform: uppercase;
+    border: none;
+    background: #000;
+    color: #fff;
+    padding: 0 13px;
+    cursor: pointer;
+    height: 32px;
+}
+
+.footer_unit_newsletter_unit button:hover {
+    background: #fff;
+    color: #000;
+}
+
+/*.footer_newsletter_payments {*/
+    /*float: left;*/
+    /*width: 100%;*/
+    /*margin-top: 40px;*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-between;*/
+/*}*/
+
+.footer_about_us_unit {
+    width: 240px;
+}
+
+.footer_about_us_text {
+    text-align: justify;
+}
+
+.footer_phone_label,
+.footer_email_label,
+.footer_phone,
+.footer_email {
+    font-size: 14px;
+}
+
+.footer_phone_label,
+.footer_email_label {
+    margin-top: 15px;
+    float: left;
+    margin-right: 25px;
+}
+
+.footer_phone,
+.footer_email {
+    margin-top: 15px;
+    float: left;
+}
+
+.footer_email {
+    color: #faef03;
+}
+
+.footer_unit_links a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    font-family: "Roboto Regular", sans-serif;
+    line-height: 20px;
+}
+
+.copyrights_wrap {
+    height: 50px;
+    background: #333;
+}
+
+.copyrights {
+    line-height: 50px;
+    font-size: 12px;
+    width: 1170px;
+    margin: 0 auto;
+    font-family: "Roboto Regular", sans-serif;
+}
+
+.footer_socials {
+    float: right;
+}
+
+.footer_socials i {
+    font-size: 16px;
+    margin-left: 14px;
+}

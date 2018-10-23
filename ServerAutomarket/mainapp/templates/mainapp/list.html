@@ -1,0 +1,29 @@
+{% extends 'master.html' %}
+
+{% block page_title %}
+AutoMarket
+{% endblock %}
+
+{% block page_content %}
+
+
+        <div class="right_main">
+            <div class="header_products">
+                {{ title }}
+            </div>
+            <div class="products_wrap">
+                <div class="product_unit">
+                    <ul>
+                        {% for itm in products %}
+                    <div class="product_name">
+                        <li>
+                        <a href="/static/mainapp/Cars/{{ forloop.counter0 }}">{{ itm }}</a>
+                        </li>
+                    </div>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

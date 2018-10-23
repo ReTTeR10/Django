@@ -1,0 +1,53 @@
+{% extends 'master.html' %}
+
+{% block page_title %}
+Contacts
+{% endblock %}
+
+{% block page_content %}
+        <div class="right_main">
+
+
+            <h2>
+                <b> Напишите нам!</b>
+            </h2>
+
+            <form action="post">
+                <fieldset>
+                    <legend>Ваши контактные данные</legend>
+                    <input class="fields" type="text" placeholder="Ваше Имя"><br>
+                    <input id="email_input" type="text" size="25" placeholder="Ваш e-mail"><br>
+                    <input class="fields" type="text" placeholder="Ваш номер телефона"><br>
+                    <br>
+                    <select class="fields">
+                        <option>вопрос по заказу</option>
+                        <option>предложение</option>
+                    </select>
+                    <br>
+                    <br>
+                    <textarea class="text_input" placeholder="Текст вашего обращения"></textarea><br>
+                    <input type="submit" value="Отправить">
+                </fieldset>
+            </form>
+
+            <h2>
+                <b> Наш адрес: </b>
+            </h2>
+            <a>
+                Москва, Чертановская улица, 45А.
+            </a>
+            <a><b>Индекс:</b> 117570</a>
+            <a><b>Телефон:</b> +7(999)929-92-92</a>
+            <a><b>Email:</b> info@automarket.ru</a>
+            <a>Схема прохода: </a>
+            <br>
+            <br>
+
+            <!--<a id="map" href="https://yandex.ru/maps/?um=constructor%3Ab93971d2bcd07340fab028fafd47a4bf1b91b75e7a0dba5680efe4e360764590&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Ab93971d2bcd07340fab028fafd47a4bf1b91b75e7a0dba5680efe4e360764590&amp;width=600&amp;height=450&amp;lang=ru_RU" alt="" style="border: 0;" /></a>-->
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab93971d2bcd07340fab028fafd47a4bf1b91b75e7a0dba5680efe4e360764590&amp;width=100%25&amp;height=374&amp;lang=ru_RU&amp;scroll=true"></script>
+
+
+
+
+        </div>
+   {% endblock %}

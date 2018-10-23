@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF­8">
+    <title>
+        {% block page_title %}
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" type="text/css" href="/static/mainapp/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/mainapp/packages/font-awesome-4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<header>
+    <meta charset="UTF-8">
+    <div class="header_inside">
+        AutoMarket
+           <div class="Welcome">
+                <div class="Hello">
+                    AutoMarket приветствует тебя!
+                </div>
+                <div class="Hello_add">
+                     Лучший сайт для выбора автомобиля
+                </div>
+           </div>
+        <div class="header_social">
+            <a href="#" target="_blank">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fa fa-youtube"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fa fa-pinterest-p"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fa fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</header>
+<main>
+    <div class ="main_container">
+        <div class="catalog-product">
+             <ul class = "menu_list">
+            <li><a href="/index">
+                <img src="/static/mainapp/images/head_icon.png" class="menu_image" alt="Сatalog">
+                Каталог</a></li>
+            <li><a href="/contacts">
+                <img src="/static/mainapp/images/contacts.png" class="menu_image" alt="contacts">
+                Контакты
+            </a></li>
+            <li><a href="/LoginPage">
+                <img src="/static/mainapp/images/login.png" class="menu_image" alt="login">
+                Личный кабинет
+            </a></li>
+        </ul></div>
+
+        <div class="b_under_menu_wrap">
+            <div class="b_under_menu">
+                Теперь<br>
+                мы<br>
+                открыты!
+            </div>
+        </div>
+        <section>
+            {% block page_content %}
+            {% endblock %}
+        </section>
+
+    </div>
+</main>
+
+
+<footer>
+    <div class="footer_container">
+        <div class="footer_unit">
+            <div class="footer_unit_head">
+                Категории
+            </div>
+            <div class="footer_unit_links">
+                <a href="../../mainapp/templates/index.html">Главная</a>
+                <a href="../../mainapp/templates/contacts.html">Контакты</a>
+                <a href="../../mainapp/templates/LoginPage.html">Личный кабинет</a>
+            </div>
+        </div>
+
+        <div class="footer_unit">
+            <div class="footer_unit_head">
+                Поддержка
+            </div>
+            <div class="footer_unit_links">
+                <a href="../../mainapp/templates/index.html">Карта сайта</a>
+                <a href="../../mainapp/templates/contacts.html">Напишите нам</a>
+            </div>
+        </div>
+
+        <div class="footer_unit_newsletter_unit">
+            <div class="footer_unit_head">
+                Новостная рассылка
+            </div>
+            <div class="footer_unit_newsletter_text">
+                Подпишись на наши новости и акции
+            </div>
+
+            <input type="text" placeholder="INSERT EMAIL">
+            <button>
+                Подписаться
+            </button>
+        </div>
+
+
+        <div class="footer_about_us_unit">
+            <div class="footer_unit_head">
+                О нас:
+            </div>
+        <div class="footer_about_us_text">
+                Лучший сайт про автомобили
+            </div>
+            <div class="footer_phone_label">
+                Телефон:
+            </div>
+            <div class="footer_phone">
+                7-999-342-2442
+            </div>
+            <div class="footer_email_label">
+                E-mail:
+            </div>
+            <div class="footer_email">
+                info@automarket.com
+            </div>
+        </div>
+    </div>
+    <div class="copyrights_wrap">
+        <div class="copyrights">
+            &copy; 2018 AUTOMARKET. Все права защищены
+        </div>
+    </div>
+</footer>
+</body>
+</html>
