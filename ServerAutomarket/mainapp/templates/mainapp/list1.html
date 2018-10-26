@@ -24,11 +24,12 @@ AutoMarket
                 <div class="product_unit">
                     <ul>
                         {% for itm in products %}
-                            {% include 'products/components/item.html' with count=forloop.counter0 name=itm %}
+                    <div class="product_name">
+                        <li>
+                        <a href="/static/mainapp/Cars/{{ forloop.counter0 }}">{{ itm }}</a>
+                        </li>
+                    </div>
                         {% endfor %}
-                    <a href="{% url 'mainapp:contacts' %}">
-                                Contacts
-                            </a>
                     </ul>
                 </div>
             </div>

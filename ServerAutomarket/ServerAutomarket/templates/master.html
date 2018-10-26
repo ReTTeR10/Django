@@ -6,6 +6,8 @@
         {% block page_title %}
         {% endblock %}
     </title>
+        {% block page_styles %}
+        {% endblock %}
     <link rel="stylesheet" type="text/css" href="/static/mainapp/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -48,14 +50,14 @@
     <div class ="main_container">
         <div class="catalog-product">
              <ul class = "menu_list">
-            <li><a href="/index">
+            <li><a href="{% url 'mainapp:mainapp' %}">
                 <img src="/static/mainapp/images/head_icon.png" class="menu_image" alt="Сatalog">
                 Каталог</a></li>
-            <li><a href="/contacts">
+            <li><a href="{% url 'mainapp:contacts' %}">
                 <img src="/static/mainapp/images/contacts.png" class="menu_image" alt="contacts">
                 Контакты
             </a></li>
-            <li><a href="/LoginPage">
+            <li><a href="{% url 'mainapp:LoginPage' %}">
                 <img src="/static/mainapp/images/login.png" class="menu_image" alt="login">
                 Личный кабинет
             </a></li>
@@ -84,9 +86,9 @@
                 Категории
             </div>
             <div class="footer_unit_links">
-                <a href="../../mainapp/templates/index.html">Главная</a>
-                <a href="../../mainapp/templates/contacts.html">Контакты</a>
-                <a href="../../mainapp/templates/LoginPage.html">Личный кабинет</a>
+                <a href="{% url 'mainapp:mainapp' %}">Главная</a>
+                <a href="{% url 'mainapp:contacts' %}">Контакты</a>
+                <a href="{% url 'mainapp:LoginPage' %}">Личный кабинет</a>
             </div>
         </div>
 
@@ -95,8 +97,8 @@
                 Поддержка
             </div>
             <div class="footer_unit_links">
-                <a href="../../mainapp/templates/index.html">Карта сайта</a>
-                <a href="../../mainapp/templates/contacts.html">Напишите нам</a>
+                <a href="{% url 'mainapp:mainapp' %}">Карта сайта</a>
+                <a href="{% url 'mainapp:LoginPage' %}">Напишите нам</a>
             </div>
         </div>
 
