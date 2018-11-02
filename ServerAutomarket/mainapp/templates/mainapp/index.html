@@ -1,7 +1,13 @@
 {% extends 'master.html' %}
 
+{% load static %}
+
 {% block page_title %}
 AutoMarket
+{% endblock %}
+
+{% block page_styles %}
+<link rel="stylesheet" href="{% static 'mainapp/style.css' %}">
 {% endblock %}
 
 {% block page_content %}

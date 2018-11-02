@@ -1,17 +1,11 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-    <!--<meta charset="UTF-8">-->
-    <!--<title>list</title>-->
-<!--</head>-->
-<!--<body>-->
-
 
 {% extends 'master.html' %}
 
 {% block page_title %}
 AutoMarket
 {% endblock %}
+
+
 
 {% block page_content %}
 
@@ -22,13 +16,39 @@ AutoMarket
             </div>
             <div class="products_wrap">
                 <div class="product_unit">
+
+                    <ul class="pagination">
+                    {% if products.has_previous %}
+                    <li class="pagination__link_prev">
+                        <a href="?page={{ products.previous_page_number }}">
+                            Previous
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% for num in products.paginator.page_range %}
+                    <li class="pagination__link_page">
+                        <a href="?page={{ num }}">
+                            {{ num }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                    {% if products.has_next %}
+                    <li class="pagination__link_next">
+                        <a href="?page={{ products.next_page_number }}">
+                            Next
+                        </a>
+                    </li>
+                    {% endif %}
+                    </ul>
+
+
                     <ul>
                         {% for itm in products %}
-                            {% include 'products/components/item.html' with count=itm.id name=itm %}
+                            {% include 'products/components/item.html' with image=itm.image count=itm.id name=itm %}
                         {% endfor %}
                     <a href="{% url 'mainapp:contacts' %}">
                                 Contacts
-                            </a>
+                    </a>
                     </ul>
                 </div>
             </div>

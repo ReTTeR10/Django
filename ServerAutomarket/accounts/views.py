@@ -21,6 +21,7 @@ def account_login(request):
 
             if user and user.is_active:
                 login(request, user)
+
                 return redirect(success_url)
 
 
