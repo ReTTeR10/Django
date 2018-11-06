@@ -24,5 +24,4 @@ def account_login(request):
 
                 return redirect(success_url)
 
-
     return render(request, 'accounts/login.html', {'form': form})

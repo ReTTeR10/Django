@@ -3,9 +3,6 @@ from products.models import Product
 
 
 class Command(BaseCommand):
-    def add_arguments(self, parser):
-        parser.add_argument('--range', type=int, required=False, default=10)
-
     def handle(self, *args, **option):
         try:
             query = Product.objects.filter(title__startswith='[test]')

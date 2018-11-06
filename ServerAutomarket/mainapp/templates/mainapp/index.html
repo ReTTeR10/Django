@@ -67,7 +67,15 @@ AutoMarket
                 <div class="product_unit">
 
                     <div class="product_name">
-                        <a href="products/list/">список</a>
+                        <ul class="menu">
+
+                            <li class="menu__link">
+                                <a href="{% url 'products:list' %}" class="menu__link-inner_products">Продукты</a>
+                            </li>
+                            <li class="menu__link">
+                                <a href="{% url 'categories:list' %}" class="menu__link-inner_categories">Категории</a>
+                            </li>
+                        </ul>
                     </div>
 
                 </div>

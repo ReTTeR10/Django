@@ -1,14 +1,20 @@
 
 {% extends 'master.html' %}
+{% load static %}
 
 {% block page_title %}
 AutoMarket
+{% endblock %}
+
+{% block page_styles %}
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
 {% endblock %}
 
 
 
 {% block page_content %}
 
+{% include 'pagination.html' with page=page_obj paginator=paginator %}
 
         <div class="right_main">
             <div class="header_products">
@@ -17,43 +23,43 @@ AutoMarket
             <div class="products_wrap">
                 <div class="product_unit">
 
-                    <ul class="pagination">
-                    {% if products.has_previous %}
-                    <li class="pagination__link_prev">
-                        <a href="?page={{ products.previous_page_number }}">
-                            Previous
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% for num in products.paginator.page_range %}
-                    <li class="pagination__link_page">
-                        <a href="?page={{ num }}">
-                            {{ num }}
-                        </a>
-                    </li>
-                    {% endfor %}
-                    {% if products.has_next %}
-                    <li class="pagination__link_next">
-                        <a href="?page={{ products.next_page_number }}">
-                            Next
-                        </a>
-                    </li>
-                    {% endif %}
+                    <ul class="product-list">
+                {% for itm in products %}
+                {% include 'products/components/item.html' with image=itm.image count=itm.id name=itm %}
+                {% endfor %}
                     </ul>
 
+                <button class="show-more-button">Show more</button>
+                {% endblock %}
 
-                    <ul>
-                        {% for itm in products %}
-                            {% include 'products/components/item.html' with image=itm.image count=itm.id name=itm %}
-                        {% endfor %}
-                    <a href="{% url 'mainapp:contacts' %}">
-                                Contacts
-                    </a>
-                    </ul>
-                </div>
-            </div>
-        </div>
+                {% block page_js %}
+                        <script src="{% static 'products/js/products.js' %}"></script>
+                        <script>
+                            const productList = document.querySelector('.product-list');
+                            const showMoreButton = document.querySelector('.show-more-button');
 
+                            let productsUrl = '{% url "rest_products:list" %}?page={% if page_obj.has_next %}{{ page_obj.next_page_number }}{% endif %}';
+
+                            const showMore = () => {
+                                fetch(productsUrl)
+                                    .then(response => response.json())
+                                    .then(
+                                        data => {
+                                            data.results.map(
+                                                itm => productList.innerHTML += renderProduct(itm)
+                                            )
+                                            if (data.next_url) {
+                                                productsUrl = data.next_url
+                                            }
+                                        }
+                                    )
+                            };
+
+                            showMoreButton.addEventListener('click', showMore);
+                        </script>
+                                        </div>
+                                    </div>
+                                </div>
 {% endblock %}
 <!--</body>-->
 <!--</html>-->

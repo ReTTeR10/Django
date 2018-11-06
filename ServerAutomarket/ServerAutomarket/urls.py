@@ -21,11 +21,17 @@ from django.conf import settings
 #from .views import product_list, product_detail
 
 
+router = [
+    path('products/', include('products.routes')),
+]
+
 urlpatterns = [
+    path('api/', include(router)),
     path('admin/', admin.site.urls),
     path('', include('mainapp.urls')),
     path('products/', include('products.urls')),
-    path('accounts/', include('accounts.urls'))
+    path('accounts/', include('accounts.urls')),
+    path('categories/', include('products.urls.categories'))
     #path('products/', include('products.urls')),
     # path('<int:idx>', product_detail),
     # path('list/',product_list),
