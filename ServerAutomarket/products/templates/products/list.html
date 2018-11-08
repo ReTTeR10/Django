@@ -24,13 +24,22 @@ AutoMarket
                 <div class="product_unit">
 
                     <ul class="product-list">
+
                 {% for itm in products %}
                 {% include 'products/components/item.html' with image=itm.image count=itm.id name=itm %}
                 {% endfor %}
+
+
+
                     </ul>
+
 
                 <button class="show-more-button">Show more</button>
                 {% endblock %}
+
+
+
+
 
                 {% block page_js %}
                         <script src="{% static 'products/js/products.js' %}"></script>
@@ -61,5 +70,7 @@ AutoMarket
                                     </div>
                                 </div>
 {% endblock %}
+
+
 <!--</body>-->
 <!--</html>-->

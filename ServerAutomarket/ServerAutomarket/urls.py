@@ -29,6 +29,7 @@ urlpatterns = [
     path('api/', include(router)),
     path('admin/', admin.site.urls),
     path('', include('mainapp.urls')),
+    path('basket/', include('basketapp.urls')), #,namespace='basket')),
     path('products/', include('products.urls')),
     path('accounts/', include('accounts.urls')),
     path('categories/', include('products.urls.categories'))

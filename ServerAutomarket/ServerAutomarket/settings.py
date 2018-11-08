@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'mainapp',
     'products',
     'accounts',
+    'basketapp',
 ]
 
 AUTH_USER_MODEL = 'accounts.AccountUser'
