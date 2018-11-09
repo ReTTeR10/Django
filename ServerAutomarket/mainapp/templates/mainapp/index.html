@@ -77,7 +77,11 @@ AutoMarket
                             </li>
                         </ul>
                     </div>
-
+                    {% if is_anon == False %}
+                    <h3>
+                        {{ username }}
+                    </h3>
+                    {% endif %}
                 </div>
             </div>
         </div>

@@ -9,6 +9,8 @@ def mainapp(request):
     template = get_template('mainapp/index.html')
     content = {
         'title': 'Каталог',
+        'username': 'Yegor',
+        'is_anon': False,
     }
     response_string = template.render(content)
 

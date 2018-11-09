@@ -28,7 +28,7 @@ def _get_args_string(args):
 def runserver(addrport='', *args, **kwargs):
     local(
         f'''
-        cd ServerAutomarket
+        cd djangoProject\ServerAutomarket
         python manage.py runserver {addrport} {_get_args_string(args)} {_get_kwargs_string(kwargs)}
         '''
     )
@@ -92,7 +92,7 @@ def init():
         local(f'virtualenv {ENVIRONMENT_NAME}')
         local(
             f'''
-            . {ENVIRONMENT_NAME}/bin/activate
+            . {ENVIRONMENT_NAME}djangoProject/getstarted/Scripts/activate
             pip freeze > {REQUIRENMENTS_FILE_PATH}
             '''
         )

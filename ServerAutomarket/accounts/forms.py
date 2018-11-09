@@ -9,8 +9,6 @@ class AccountUserForm(forms.Form):
         )
     )
 
-
-
     password = forms.CharField(
         max_length=250,
         widget=forms.widgets.PasswordInput(

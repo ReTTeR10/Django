@@ -4,10 +4,15 @@ from django.views.generic import (
     CreateView, UpdateView, DeleteView,
     ListView, DetailView
 )
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import (
+    LoginRequiredMixin, UserPassesTestMixin
+)
 from django.core.paginator import Paginator
 from django.urls import reverse, reverse_lazy
 from django.http import Http404, JsonResponse
 
+from accounts.mixins import AdminRoleRequired
 from products.forms import ProductForm
 from products.models import Product
 
@@ -55,7 +60,7 @@ class ProductJsonListView(ListView):
         return JsonResponse(context)
 
 
-class ProductCreateView(CreateView):
+class ProductCreateView(LoginRequiredMixin, AdminRoleRequired, CreateView):
     model = Product
     fields = [
         'title', 'category', 'image',
@@ -63,9 +68,10 @@ class ProductCreateView(CreateView):
     ]
     template_name = 'products/create.html'
     success_url = reverse_lazy('products:list')
+    login_url = reverse_lazy('accounts:login')
 
 
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(LoginRequiredMixin, AdminRoleRequired, UpdateView):
     model = Product
     fields = [
         'title', 'category', 'image',
@@ -73,12 +79,17 @@ class ProductUpdateView(UpdateView):
     ]
     template_name = 'products/update.html'
     success_url = reverse_lazy('products:list')
+    login_url = reverse_lazy('accounts:login')
 
 
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Product
     template_name = 'products/delete.html'
     success_url = reverse_lazy('products:list')
+    login_url = reverse_lazy('accounts:login')
+
+    def test_func(self):
+        return self.request.user.is_superuser
 
 
 class ProductListView(ListView):
@@ -136,6 +147,7 @@ def product_update(request, pk):
     )
 
 
+@login_required(login_url=reverse_lazy('accounts:login'))
 def product_create(request):
     form = ProductForm()
     success_url = reverse_lazy('mainapp:index')
