@@ -5,7 +5,7 @@ const renderProduct = ({id, title, image}) => (
       <span class="product__name">
           ${ title }
       </span>
-      <a class="product__link" href="/products/${id}">
+      <a class="product__link" href="/products/${ id }">
       </a>
   </li>
   `

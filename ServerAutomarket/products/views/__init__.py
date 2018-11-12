@@ -5,6 +5,6 @@ from .products import (
     product_list, product_detail
 )
 from .categories import (
-    CategoryList, CategoryDetail,
-    category_list, category_detail
+    CategoryList, CategoryDetail, CategoryJsonListView,
+    category_list, category_detail,
 )
